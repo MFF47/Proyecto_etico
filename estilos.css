@@ -1,0 +1,194 @@
+/* Estilos generales del cuerpo */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f9;
+    color: #333;
+}
+
+/* Cabecera */
+header {
+    background-color: #004d99; /* Azul oscuro */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 1.1em;
+    font-style: italic;
+}
+
+/* Menú Principal de Pestañas */
+.tab-menu {
+    display: flex;
+    justify-content: center;
+    background-color: #e9ecef;
+    border-bottom: 2px solid #ccc;
+    flex-wrap: wrap; /* Permite que los botones se envuelvan si la pantalla es pequeña */
+    padding: 10px 20px 0;
+}
+
+.btn-principal {
+    background-color: #f8f9fa;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    color: #004d99;
+    transition: background-color 0.3s, color 0.3s;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin: 0 5px -2px 5px; /* Ajuste para que el borde inferior no se vea */
+}
+
+.btn-principal:hover {
+    background-color: #d1e2f3;
+}
+
+.btn-principal.activo {
+    background-color: white;
+    color: #cc0000; /* Color de acento para la pestaña activa */
+    border-bottom: 2px solid white; /* Oculta la línea de la pestaña activa */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Submenú de Pestañas */
+.submenu {
+    display: none; /* Oculto por defecto */
+    justify-content: center;
+    background-color: #004d99;
+    padding: 10px 20px;
+    border-bottom: 3px solid #cc0000; /* Línea de acento */
+    flex-wrap: wrap;
+}
+
+.btn-sub {
+    background-color: #0066cc;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 0.9em;
+    color: white;
+    margin: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-sub:hover {
+    background-color: #0088ff;
+    transform: translateY(-1px);
+}
+
+.btn-sub.activo-sub {
+    background-color: #cc0000; /* Color de acento para la subpestaña activa */
+    font-weight: bold;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Contenedor del Contenido */
+.content-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Contenido de la Pestaña */
+.contenido-pestana {
+    padding: 15px;
+    display: none; /* Oculto por defecto */
+}
+
+.contenido-pestana h2, .contenido-pestana h3 {
+    color: #004d99;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.contenido-pestana h4 {
+    color: #cc0000;
+    margin-top: 25px;
+}
+
+/* Estilos de la Portada */
+.portada-content {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.portada-content h2 {
+    font-size: 3em;
+    color: #cc0000;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.lema {
+    margin-top: 30px;
+    border: 1px dashed #ccc;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+.lema-frase {
+    font-style: italic;
+    font-size: 1.2em;
+    color: #004d99;
+}
+
+/* Estilos de Bitácora y Votos (Estructura de Contenido) */
+.bitacora-seccion, .voto-seccion, .reflexion-seccion {
+    border-left: 5px solid #004d99;
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+
+.bitacora-seccion ul, .voto-seccion ul {
+    list-style-type: '👉 ';
+    padding-left: 20px;
+}
+
+.bitacora-seccion ol, .voto-seccion ol {
+    list-style-type: decimal;
+    padding-left: 30px;
+}
+
+.frase-cierre {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #cc0000;
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px;
+    border-top: 1px solid #eee;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .tab-menu, .submenu {
+        flex-direction: column;
+    }
+
+    .btn-principal, .btn-sub {
+        margin: 5px 0;
+        border-radius: 5px;
+        width: 100%; /* Ocupar todo el ancho en móviles */
+    }
+
+    .btn-principal.activo {
+        border-bottom: none;
+    }
+}
