@@ -157,7 +157,7 @@ header p {
 }
 
 .bitacora-seccion ul, .voto-seccion ul {
-    list-style-type: '👉 ';
+    
     padding-left: 20px;
 }
 
